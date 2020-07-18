@@ -28,16 +28,20 @@
 
 
 ## Pros.
-* Support multiplexed.
+* Support multiplexed. Multiplexing over single connection.
 * Support server push.
-* Support header compression.
+* Support compression(header & data).
 * Is binary.
+* Secure by default.
+* Protocol negotiation during TLS(ALPN).
 
 
 
 
 
 ## Cons.
+* Server Push can be abused when configured incorrectly.
+* Can be slower when in mixed mode (backend is HTTP/2 but load balancer is HTTP/1.1 or vise versa).
 
 
 
